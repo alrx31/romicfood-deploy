@@ -21,6 +21,7 @@ function CardList({products, setProductsCardList}) {
             <div className="categories">
                 {categories.map((category, index) => (
                     <button
+
                         key={index}
                         className={`category-button ${activeCategory === category ? "active" : ""}`}
                         onClick={() => setActiveCategory(category)}
