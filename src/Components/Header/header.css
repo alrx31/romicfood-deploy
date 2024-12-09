@@ -1,0 +1,461 @@
+/* Основные стили */
+header {
+    width: 100%;
+    height: 100vh;
+    /*
+    position: fixed;
+    */
+}
+
+nav {
+    top: 0;
+    width: 100%;
+    height: 45px;
+    background-color: var(--white);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--gray);
+    position: fixed;
+    padding: 0 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+nav a {
+    margin: 0 8px;
+    color: var(--gray);
+}
+
+.nav_logo {
+    display: flex;
+    position: relative;
+    font-size: 50px;
+    align-items: center; /* Выравнивание логотипа и названия компании по вертикали */
+    color: var(--gray); /* Пример цвета для логотипа и текста */
+}
+.nav_logo .company_name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(var(--index)*1.2); /* Размер шрифта для названия компании */
+    font-weight: bold; /* Жирный шрифт для названия */
+    margin-left: 10px; /* Отступ между логотипом и названием компании */
+    color: var(--gray); /* Цвет текста названия */
+}
+.navigation{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+/* Кнопки и их цвета */
+.nav_buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.nav_search {
+    position: relative;
+}
+
+.nav_search input {
+    width: 350px;
+    height: 35px;
+    border: 1px solid var(--gray);
+    border-radius: 50px;
+    padding: 12px 16px;
+    margin: 0;
+}
+
+.nav_search img {
+    width: 18px;
+    right: 0px;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(10deg);
+    position: absolute;
+}
+
+/* Адаптивное изображение на фоне */
+.header_content {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../../../public/img/pexels-chanwalrus-958545.jpg") no-repeat center  center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Тексты на главной */
+.header_content_text {
+    color: var(--white);
+    text-align: center;
+}
+
+.header_content_text h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white; /* Цвет белый */
+}
+
+.header_content_text h3 {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 16px 0;
+    color: white; /* Цвет белый */
+}
+
+.header_content_text a {
+    margin: 0 auto;
+    margin-top: 32px;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    width: 200px;
+    background-color: #FFFFFFCC;
+    color:black;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+/* Бургер-меню */
+.burger-menu {
+    display: none;
+    --size: 3px; /* Толщина линий */
+    position: absolute; /* Оставляем абсолютное позиционирование */
+    right: 20px; /* Смещаем вправо на 20px */
+    width: 40px; /* Ширина иконки-бургера */
+    height: 24px; /* Высота иконки-бургера */
+    cursor: pointer; /* Курсор в виде указателя */
+}
+
+.burger-menu::before,
+.burger-menu::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: var(--size); /* Толщина линий */
+    background-color: var(--gray); /* Цвет линий */
+    border-radius: 3px; /* Скругление углов линий */
+    transition: 0.3s ease; /* Плавный переход при анимации */
+}
+
+.burger-menu::before {
+    top: 0; /* Верхняя линия */
+}
+
+.burger-menu::after {
+    bottom: 0; /* Нижняя линия */
+}
+
+.burger-menu span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: var(--size); /* Толщина линий */
+    background-color: var(--gray); /* Цвет линий */
+    border-radius: 3px; /* Скругление углов линий */
+    transition: 0.3s ease; /* Плавный переход */
+    transform: translateY(-50%); /* Центрируем по вертикали */
+}
+
+.burger-menu.active::before {
+    top: 50%; /* Центрируем верхнюю линию */
+    transform: translateY(-50%) rotate(-45deg); /* Поворачиваем верхнюю линию */
+}
+
+.burger-menu.active::after {
+    top: 50%; /* Центрируем нижнюю линию */
+    transform: translateY(-50%) rotate(45deg); /* Поворачиваем нижнюю линию */
+}
+
+.burger-menu.active span {
+    opacity: 0; /* Скрываем среднюю линию */
+}
+
+.burger-icon {
+    position: absolute;
+    background-color: #333;
+    height: var(--size);
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+}
+
+.nav_buttons.open {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для меню */
+    border-top: 2px solid #eaeaea; /* Разделение сверху */
+    display: flex;
+    flex-direction: column; /* Расположить кнопки в столбик */
+    align-items: flex-start; /* Выравнивание по левому краю */
+    position: absolute;
+    top: 40px; /* Расстояние от верхней границы под навигационной панелью */
+    right: 0;
+    background-color: var(--white); /* Белый фон */
+    width: 100%; /* Полная ширина */
+    padding: 20px;
+    z-index: 10; /* Убедитесь, что меню на переднем плане */
+}
+
+.nav_buttons.open a {
+    display: block; /* Кнопки занимают всю ширину строки */
+    margin:6px 0; /* Отступ между кнопками */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 14px; /* Размер шрифта */
+    color: var(--gray); /* Цвет текста */
+    padding: 6px; /* Внутренние отступы для кнопок */
+    border-radius: 4px; /* Сглаженные углы */
+    transition: background-color 0.3s ease; /* Анимация при наведении */
+}
+
+.nav_buttons.open a:hover {
+    background-color: var(--gray); /* Акцентный цвет при наведении */
+    color: #ffffff; /* Белый текст */
+}
+
+.cart-icon {
+    font-size: 1.6em;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Профиль и кнопка входа */
+#sign_in_button {
+    background-color: transparent;
+    border: 2px solid var(--gray);
+    padding: 7px 14px;
+    border-radius: 8px;
+    margin-right: 10px;
+    font-size: 12px;
+    display: none;
+}
+
+#sign_in_button.active {
+    display: block;
+}
+
+#profile_button {
+    background-color: transparent;
+    border: 2px solid var(--gray);
+    padding: 7px 14px;
+    border-radius: 8px;
+    margin-right: 10px;
+    font-size: 12px;
+    display: none;
+}
+
+#profile_button.active {
+    display: block;
+}
+@media (max-width: 1024px){
+
+    .nav_buttons.open {
+        top: 45px;
+    }
+    .cart-icon {
+        font-size: 1.5em;
+        display: flex;
+        position: relative;
+        right: 40px;
+        /* Располагаем корзину левее бургер-меню */
+    }
+    .nav_search {
+        position: absolute;
+        left: 50%; /* Откорректируем позицию поиска */
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .navigation{
+        display: flex;
+    }
+    .nav_buttons {
+        display: none; /* Скрываем кнопки на мобильных */
+    }
+    .burger-menu {
+        border-radius: 3px;
+        display: block;
+        width: 20px;
+        height: 16px;
+    }
+    .burger-icon {
+        height: 3px;
+        border-radius: 2px;
+    }
+
+    .nav_buttons.open {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+/* Медиа запросы для мобильных устройств */
+@media (max-width: 768px) {
+
+    .nav_logo .company_name{
+        display: none;
+    }
+    nav {
+        height: 40px; /* Снижаем высоту навигационной панели */
+        padding: 0 10px;
+    }
+    .navigation{
+        display: flex;
+    }
+    .nav_search {
+        position: absolute;
+        left: 50%; /* Откорректируем позицию поиска */
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .nav_search input {
+        height: 30px;
+        width: 200px;
+        font-size: 12px;
+        padding: 8px 16px; /* Уменьшаем отступы для компактности */
+    }
+    .nav_search img {
+        width: 16px; /* Уменьшаем размер иконки поиска */
+        top: 50%;
+    }
+    .nav_buttons {
+        display: none; /* Скрываем кнопки на мобильных */
+    }
+    .nav_buttons.open {
+        top: 40px;
+    }
+    .burger-menu {
+        border-radius: 3px;
+        display: block;
+        width: 20px;
+        height: 16px;
+    }
+    .burger-icon {
+        height: 3px;
+        border-radius: 2px;
+    }
+
+    .nav_buttons.open {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header_content{
+        height: 100vh;
+    }
+    .header_content_text h1 {
+        font-size: 30px;
+    }
+
+    .header_content_text h3 {
+        font-size: 18px;
+    }
+
+    .header_content_text a {
+        width: 150px;
+        padding: 12px;
+        font-size: 14px;
+    }
+    .cart-icon {
+        font-size: 1.5em;
+        display: flex;
+        position: relative;
+        right: 40px;
+        /* Располагаем корзину левее бургер-меню */
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding:5px 10px;
+        height: 35px; /* Еще больше уменьшаем высоту панели */
+    }
+
+
+    .nav_logo {
+        font-size: 38px;
+        position: static;
+    }
+
+    .nav_search {
+        align-items: center;
+        display: flex;
+        height: 26px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .nav_search input {
+        font-size: 10px;
+        padding: 8px 10px; /* Уменьшаем отступы */
+    }
+
+    .nav_search img {
+        align-items: center;
+        width: 14px; /* Уменьшаем иконку еще больше */
+        right: 18px;
+        top: 14px;
+
+    }
+
+    .burger-menu {
+        right: 10px;
+        width: 20px;
+        height: 22px; /* Уменьшаем высоту бургер-меню */
+    }
+
+
+
+    .burger-icon {
+        width: 100%;
+        background-color: #333;
+        height: var(--size);
+        border-radius: 1px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .header_content{
+        height: 100vh;
+    }
+
+    .header_content_text h1 {
+        font-size: 24px;
+    }
+
+    .header_content_text h3 {
+        font-size: 16px;
+    }
+
+    .header_content_text a {
+        width: 100px;
+        font-size: 14px;
+
+    }
+
+    .cart-icon {
+        right: 40px;
+        font-size: 1.4em;
+        display: flex;
+    }
+
+    .nav_profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

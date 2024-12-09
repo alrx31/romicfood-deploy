@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+html{
+  --white: #FFF;
+  --gray:#2C2C2C;
+  --index: calc(1dvw + 1dvh);
+  --blue: #007AFF;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--white);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gray);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  cursor: default;
+  font-family: "Roboto", sans-serif;
+}
+*,*:before,*:after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+a:hover{cursor: pointer;}
+nav,footer,header,aside{display: block;}
+
+html,body{
+  font-weight: bold;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  scroll-behavior: smooth;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;color: inherit;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+::-webkit-scrollbar {
+  width: 10px; /* Ширина скроллбара */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Цвет бегунка */
+  border-radius: 5px; /* Скругление */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Цвет при наведении */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Цвет фона трека */
+}

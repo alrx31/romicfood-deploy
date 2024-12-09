@@ -1,0 +1,372 @@
+/* Общий стиль страницы профиля */
+
+.profile-page {
+    background-image: url('../../../public/img/pexels-fwstudio-33348-164005.jpg'); /* Путь к вашей картинке */
+    background-size: cover; /* Растянуть картинку по всему экрану */
+    background-position: center; /* Центрировать картинку */
+    background-repeat: no-repeat; /* Отключить повторение картинки */
+    min-height: 100vh; /* Минимальная высота на весь экран */
+    padding: 20px; /* Отступы для контента */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: transparent; /* Убираем белый фон, если есть изображение */
+    font-family: 'Poppins', sans-serif;
+    color: var(--gray, #333); /* Темно-серый текст */
+    overflow-y: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+
+/* Заголовок профиля */
+.profile-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--gray, #333); /* Темно-серый фон */
+    padding: 15px 20px;
+    border-radius: 12px;
+    color: var(--white, #fff); /* Белый текст */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Легкая тень */
+}
+
+.profile-header h1 {
+    font-size: 2rem; /* Установим фиксированный размер */
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Кнопка "Редактировать" */
+.edit-button {
+    background-color: var(--white, #ffffff); /* Белая кнопка */
+    color: var(--gray, #333); /* Темно-серый текст */
+    border: 2px solid var(--white); /* Темно-серая рамка */
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Плавный эффект */
+}
+
+.edit-button:hover {
+    background-color: var(--gray, #333); /* Кнопка становится темно-серой */
+    color: var(--white, #fff); /* Текст становится белым */
+}
+
+/* Основная информация о профиле */
+.profile-main-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 5px; /* Расстояние между строками */
+    width: 100%;
+    max-width: 600px;
+
+}
+
+/* Для каждого ряда */
+.info-row {
+    display: flex;
+    gap: 5px; /* Расстояние между полями */
+    align-items: center; /* Выравнивание по вертикали */
+}
+
+/* Название поля */
+.info-label {
+    flex: 0 0 150px; /* Фиксированная ширина для метки */
+    padding: 10px;
+    border: 2px solid var(--gray); /* Рамка вокруг метки */
+    border-radius: 8px;
+    background-color: #f0f0f0; /* Светло-серый фон для метки */
+    font-weight: bold;
+    text-align: left; /* Текст по центру метки */
+    color: var(--gray); /* Цвет текста метки */
+}
+
+/* Значение поля */
+.info-value {
+    flex: 1; /* Растягивается, занимая оставшееся пространство */
+    padding: 10px;
+    border: 2px solid var(--gray); /* Рамка вокруг значения */
+    border-radius: 8px;
+    background-color: var(--white); /* Белый фон для значения */
+    text-align: left; /* Текст выравнивается по левому краю */
+    color: #333; /* Цвет текста значения */
+}
+
+/* Секция "Мои заказы" */
+.orders-section {
+    margin-top: 40px; /* Отступ сверху */
+    padding: 20px;
+    border: 2px solid var(--gray, #333); /* Тёмно-серая рамка */
+    border-radius: 12px;
+    background-color: var(--white); /* Белый фон */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+    position: relative; /* Используем для абсолютного позиционирования */
+    width: 100%; /* Задаем ширину блока */
+    max-width: 600px; /* Максимальная ширина блока */
+    left: 0; /* Сдвигаем блок влево */
+}
+
+.orders-section h2 {
+    font-size: 1.2rem; /* Установим размер заголовка */
+    margin-bottom: 15px;
+    color: var(--gray, #333); /* Тёмно-серый цвет */
+}
+
+.orders-section ul {
+    list-style: none; /* Убираем стандартные маркеры списка */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Расстояние между элементами списка */
+    text-align: left;
+}
+
+.orders-section li {
+    font-size: 1rem; /* Установим размер текста */
+    color: var(--gray, #333); /* Тёмно-серый текст */
+}
+
+
+/* Кнопка выхода */
+.logout-section {
+    margin-top: 40px; /* Отступ сверху */
+    display: flex;
+    justify-content: center; /* Центрируем кнопку */
+}
+
+.logout-button {
+    background-color: var(--gray, #333); /* Тёмно-серая кнопка */
+    color: var(--white, #fff); /* Белый текст */
+    border: none;
+    padding: 15px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem; /* Установим размер текста */
+    font-weight: bold;
+    transition: all 0.3s ease; /* Плавный эффект */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Расстояние между иконкой и текстом */
+}
+
+.logout-button:hover {
+    background-color: var(--white, #fff); /* Белая кнопка при наведении */
+    color: var(--gray, #333); /* Тёмно-серый текст */
+    border: 2px solid var(--gray, #333); /* Добавляем рамку */
+}
+
+.logout-button .icon {
+    font-size: 1.2rem; /* Размер иконки */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .profile-header h1 {
+        font-size: 1.5rem; /* Уменьшаем заголовок */
+    }
+
+    /* Общий стиль страницы профиля */
+    .profile-page {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        padding: 20px;
+        background-color: var(--white, #ffffff); /* Белый фон */
+        font-family: 'Poppins', sans-serif;
+        color: var(--gray, #333); /* Темно-серый текст */
+        overflow-y: auto;
+        display: flex;
+        justify-content: center; /* Центрируем страницу */
+        align-items: center; /* Выравниваем по вертикали */
+        flex-flow: column nowrap;
+
+
+    }
+
+    /* Заголовок профиля */
+    .profile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--gray, #333); /* Темно-серый фон */
+        padding: 15px 20px;
+        border-radius: 12px;
+        color: var(--white, #fff); /* Белый текст */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Легкая тень */
+    }
+
+    /* Основная информация о профиле */
+    .profile-main-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Выравниваем по левому краю */
+        gap: 20px; /* Расстояние между строками */
+        font-size: 1rem; /* Установим фиксированный размер текста */
+        color: var(--gray, #333); /* Тёмно-серый текст */
+        width: 100%;
+        max-width: 600px; /* Максимальная ширина блока */
+    }
+
+    /* Блоки с рамкой для каждого поля */
+    .profile-field {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #000; /* Черная рамка */
+        border-radius: 8px; /* Скругленные углы */
+        background-color: var(--white, #ffffff); /* Белый фон */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    }
+
+    /* Название поля */
+    .field-label {
+        font-weight: bold;
+        color: var(--gray, #333); /* Тёмно-серый цвет */
+        margin-bottom: 5px; /* Отступ снизу */
+    }
+
+    /* Значение поля */
+    .field-value {
+        color: var(--gray, #333); /* Тёмно-серый цвет */
+        padding-left: 10px; /* Отступ слева для значения */
+    }
+
+    /* Секция "Обо мне" */
+    .about-section {
+        margin-top: 40px; /* Отступ сверху */
+        padding: 20px;
+        border: 2px solid var(--gray, #333); /* Тёмно-серая рамка */
+        border-radius: 12px;
+        background-color: var(--white, #ffffff); /* Белый фон */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+        width: 100%;
+        max-width: 600px; /* Максимальная ширина блока */
+    }
+
+    /* Секция "Мои заказы" */
+    .orders-section {
+        margin-top: 40px; /* Отступ сверху */
+        padding: 20px;
+        border: 2px solid var(--gray, #333); /* Тёмно-серая рамка */
+        border-radius: 12px;
+        background-color: var(--white, #ffffff); /* Белый фон */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+        width: 100%;
+        max-width: 600px; /* Максимальная ширина блока */
+    }
+
+    /* Кнопка выхода */
+    .logout-section {
+        margin-top: 40px; /* Отступ сверху */
+        display: flex;
+        justify-content: center; /* Центрируем кнопку */
+    }
+
+    .logout-button {
+        background-color: var(--gray, #333); /* Тёмно-серая кнопка */
+        color: var(--white, #fff); /* Белый текст */
+        border: none;
+        padding: 15px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1rem; /* Установим размер текста */
+        font-weight: bold;
+        transition: all 0.3s ease; /* Плавный эффект */
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Расстояние между иконкой и текстом */
+    }
+
+    .logout-button:hover {
+        background-color: var(--white, #fff); /* Белая кнопка при наведении */
+        color: var(--gray, #333); /* Тёмно-серый текст */
+        border: 2px solid var(--gray, #333); /* Добавляем рамку */
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+        /* Заголовок */
+        .profile-header h1 {
+            font-size: 1.5rem; /* Уменьшаем заголовок */
+        }
+
+        .edit-button {
+            font-size: 0.9rem; /* Уменьшаем кнопку */
+        }
+
+        /* Основная информация о профиле */
+        .profile-main-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Выравниваем по левому краю */
+            gap: 5px; /* Уменьшаем расстояние между строками */
+            font-size: 0.75rem; /* Устанавливаем фиксированный размер текста */
+            color: var(--gray, #333); /* Тёмно-серый цвет */
+            padding: 20px; /* Добавляем отступы */
+            width: 100%;
+        }
+
+        /* Блоки с рамкой для каждого поля */
+        .profile-field {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #000; /* Черная рамка */
+            border-radius: 8px; /* Скругленные углы */
+            background-color: var(--white, #ffffff); /* Белый фон */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
+            display: flex;
+            flex-direction: column; /* Элементы внутри блока будут располагаться по колонке */
+        }
+
+        /* Название поля */
+        .field-label {
+            font-weight: bold;
+            color: var(--gray, #333); /* Тёмно-серый цвет */
+            margin-bottom: 5px; /* Отступ снизу */
+        }
+
+        /* Значение поля */
+        .field-value {
+            color: var(--gray, #333); /* Тёмно-серый цвет */
+            padding-left: 10px; /* Отступ слева для значения */
+        }
+    }
+
+    /* Для десктопной версии */
+    .profile-main-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Выравнивание по левому краю */
+        margin-top: 30px; /* Отступ сверху */
+        gap: 5px; /* Расстояние между строками */
+        font-size: 1rem; /* Установим размер текста */
+        color: var(--gray, #333); /* Тёмно-серый цвет */
+        width: 100%;
+        max-width: 800px; /* Максимальная ширина */
+        margin: 0 auto; /* Центрирование на странице */
+    }
+
+    /* Блоки с рамкой для каждого поля */
+    .profile-field {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #000;
+        border-radius: 8px;
+        background-color: var(--white, #ffffff);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column; /* Располагаем элементы внутри блока по колонке */
+    }
+}
+
+

@@ -1,0 +1,260 @@
+.auth_page{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: -50%;
+    top: 0;
+    background: #FFF url("../../../public/img/pexels-pixabay-326333.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: .5s linear;
+    z-index: -1;
+}
+.auth_page.active {
+    z-index: 4;
+    left: 0;
+    opacity: 1;
+}
+
+.login_Form{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: max(calc(var(--index)*17) , 400px);
+    height: max(calc(var(--index)*15),500px);
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 32px 64px -12px #2d3643;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    opacity: 0;
+    z-index: -1;
+    transition: .3s ease;
+}
+
+.login_Form.active{
+    opacity: 1;
+    z-index: 1;
+}
+
+.login_Form.error input{
+    border: 1px solid red;
+}
+
+.login_Form h1{
+    margin-top: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    color: #2B3241;
+}
+
+.login_form_inputs{
+    width: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.login_form_inputs input{
+    width: 100%;
+    height: 56px;
+    border: 1px solid var(--gray);
+    border-radius: 12px;
+    padding: 12px 12px 12px 16px;
+    margin: 10px 0;
+}
+
+.login_form_inputs label{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #2B3241;
+    margin-top: 16px;
+}
+.login_form_buttons {
+    width: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login_form_buttons button{
+    width: 100%;
+    height: 56px;
+    border: 1px solid var(--gray);
+    border-radius: 12px;
+    background-color: var(--gray);
+    color: var(--white);
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition:  0.3s ease-out;
+}
+
+.login_form_buttons button:hover{
+    background-color: var(--white);
+    color: var(--gray);
+}
+
+.login_form_buttons p{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #2B3241;
+    margin-top: 16px;
+}
+
+.login_form_buttons p a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.register_Form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 520px;
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 32px 64px -12px #2d3643;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    opacity: 0;
+    z-index: -1;
+    transition: .3s ease;
+}
+
+.register_Form.active {
+    opacity: 1;
+    z-index: 1;
+}
+.register_form_inputs{
+    width: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    transition: .3s all;
+}
+
+.register_form_buttons {
+    width: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.register_form_buttons button{
+    width: 100%;
+    height: 56px;
+    border: 1px solid var(--gray);
+    border-radius: 12px;
+    background-color: var(--gray);
+    color: var(--white);
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition:  0.3s ease-out;
+}
+
+.register_form_buttons button:hover{
+    background-color: var(--white);
+    color: var(--gray);
+}
+
+
+
+.register_Form .inp2 {
+    opacity: 0; height:0px;z-index: -1;
+}
+
+.register_Form.next .inp2{
+    opacity: 1; height:auto;z-index: 2;
+}
+
+.register_Form.next #register_next {
+    opacity: 0;z-index: -1;
+}
+.register_Form #register_next {
+    opacity: 1;z-index: 2;
+}
+
+.register_Form.next #register_button{
+    opacity: 1;z-index: 2;
+}
+
+.register_Form #register_button{
+    opacity: 0; z-index: -1;
+}
+
+.register_Form h1 {
+    margin-top: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    color: #2B3241;
+    text-align: center;
+}
+
+.register_Form.error input{
+    border: 1px solid red;
+}
+
+.register_form_inputs input{
+    width: 380px;
+    height: 56px;
+    border: 1px solid var(--gray);
+    border-radius: 12px;
+    padding: 12px 12px 12px 16px;
+    margin: 10px 0;
+}
+
+.register_form_inputs input:disabled{
+    width: 380px;
+    height: 56px;
+    border: 1px solid transparent;
+    background-color: #F2F5FF;
+    border-radius: 50px;
+    padding: 12px 12px 12px 16px;
+    margin: 10px 0;
+}
+
+.register_form_inputs label{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #2B3241;
+    margin-top: 16px;
+}
+
+
+.register_form_buttons p{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #2B3241;
+    margin-top: 16px;
+}
+
+.register_form_buttons p a {
+    color: var(--blue);
+    text-decoration: none;
+}

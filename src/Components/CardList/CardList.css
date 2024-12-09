@@ -1,0 +1,115 @@
+/* Основной стиль для страницы */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: linear-gradient(to bottom, #ffffff, #f8f8f8); /* Легкий градиент */
+    background-repeat: repeat;
+    color: var(--gray);
+    line-height: 1.6; /* Улучшает читаемость текста */
+}
+
+/* Обертка для всего контента */
+.page-container {
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Заголовок страницы */
+.menu-title {
+    font-size: calc(var(--index) * 1.2);
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--gray);
+    font-weight: bold;
+}
+
+/* Блок с поговоркой */
+.menu-quote {
+    text-align: center;
+    font-style: italic;
+    font-size: calc(var(--index) * 0.8);
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+.menu-quote .translation {
+    font-size: calc(var(--index) * 0.6);
+    color: #555;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Горизонтальный список категорий */
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.category-button {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--white);
+    color: var(--gray);
+    padding: 10px 15px;
+    font-size: calc(var(--index) * 0.7);
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid var(--gray);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.category-button:hover {
+    color: var(--gray);
+    background-color: var(--white);
+    border: 1px solid var(--gray); /* Обводка остается серой */
+}
+
+.category-button.active {
+    background-color: var(--gray); /* Темный фон для активной кнопки */
+    color: var(--white); /* Белый текст */
+    border: 1px solid var(--gray); /* Тот же цвет для границы */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Пробел между текстом и иконкой */
+}
+
+.category-button.active::before {
+    content: "✓"; /* Добавляем галочку перед текстом */
+    font-size: 0.8em; /* Размер галочки */
+    color: var(--white);
+}
+
+/* Стили для списка продуктов */
+.products-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+@media (max-width: 1024px) {
+    .products-list {
+        gap: 15px; /* Уменьшаем расстояние между карточками */
+    }
+}
+
+@media (max-width: 768px) {
+    .products-list {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,112 @@
+.cart {
+    width: 100%;
+    height: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    padding-top: 100px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart_title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cart_items {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 500px;
+}
+
+.cart_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eaeaea;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart_item_image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cart_item_details {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.cart_item_name {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cart_item_price {
+    font-size: 14px;
+    color: #888888;
+}
+
+.cart_item_remove {
+    background: none;
+    border: none;
+    color: #ff6b6b;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.cart_item_remove:hover {
+    color: #ff3b3b;
+}
+
+.cart_empty {
+    text-align: center;
+    color: #888888;
+    font-size: 16px;
+}
+
+.cart_summary {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.cart_total_price {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.cart_checkout_button,.cart_escape_button {
+    background-color: var(--gray);
+    color: #ffffff;
+    border: 1px solid var(--gray);
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 150px;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart_checkout_button:hover, .cart_escape_button:hover {
+    background-color: #fff;
+    color: var(--gray);
+}
+.buttons_container {
+    justify-content: center;
+    display: flex;
+    gap: 16px;
+}
