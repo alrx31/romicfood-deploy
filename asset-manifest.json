@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/romicfood-deploy/static/css/main.19cbfb83.css",
-    "main.js": "/romicfood-deploy/static/js/main.8370714f.js",
+    "main.js": "/romicfood-deploy/static/js/main.141e0f29.js",
     "static/media/pexels-pixabay-326333.jpg": "/romicfood-deploy/static/media/pexels-pixabay-326333.ee7140d7526eababf903.jpg",
     "static/media/pexels-fwstudio-33348-164005.jpg": "/romicfood-deploy/static/media/pexels-fwstudio-33348-164005.825190cd9083679b7d8a.jpg",
     "static/media/pexels-chanwalrus-958545.jpg": "/romicfood-deploy/static/media/pexels-chanwalrus-958545.ae88a0704b6edbb258b4.jpg",
     "index.html": "/romicfood-deploy/index.html",
     "main.19cbfb83.css.map": "/romicfood-deploy/static/css/main.19cbfb83.css.map",
-    "main.8370714f.js.map": "/romicfood-deploy/static/js/main.8370714f.js.map"
+    "main.141e0f29.js.map": "/romicfood-deploy/static/js/main.141e0f29.js.map"
   },
   "entrypoints": [
     "static/css/main.19cbfb83.css",
-    "static/js/main.8370714f.js"
+    "static/js/main.141e0f29.js"
   ]
 }
