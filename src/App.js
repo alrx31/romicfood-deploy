@@ -52,7 +52,7 @@ function App() {
     <div className="App">
         <Nav isAuth={user?.id !== null}/>
 
-        <Routes basename="/romicfood-deploy">
+        <Routes>
             <Route path="/" element={
                 <>
                     <Header isAuth={user?.id !== null}/>
