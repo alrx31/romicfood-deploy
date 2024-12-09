@@ -6,9 +6,9 @@ import {BrowserRouter, Router} from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <Router basename="/romicfood-deploy">
   <React.StrictMode>
+    <BrowserRouter basename="/romicfood-deploy">
     <App />
+    </BrowserRouter>
   </React.StrictMode>
-    </Router>
 );
