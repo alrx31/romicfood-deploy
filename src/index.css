@@ -55,6 +55,9 @@ a:hover{cursor: pointer;}
 nav,footer,header,aside{display: block;}
 
 html,body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
   font-weight: bold;
   width: 100%;
   font-size: 100%;

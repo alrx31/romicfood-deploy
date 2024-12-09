@@ -1,6 +1,6 @@
 import React from 'react';
 import './Cart.css';
-import { FiTrash2 } from 'react-icons/fi'; // Иконка для удаления товара
+import {FiShoppingCart, FiTrash2} from 'react-icons/fi'; // Иконка для удаления товара
 
 function Cart({list,setList}) {
 
@@ -37,7 +37,9 @@ function Cart({list,setList}) {
                         </div>
                     ))
                 ) : (
-                    <p className="cart_empty">Корзина пуста</p>
+                    <div className="cart_empty">
+                        <FiShoppingCart style={{ fontSize: '48px', color: '#cccccc' }} />
+                        <p>Ваша корзина пуста</p></div>
                 )}
             </div>
             {list.length > 0 && (

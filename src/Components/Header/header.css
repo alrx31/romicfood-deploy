@@ -2,9 +2,7 @@
 header {
     width: 100%;
     height: 100vh;
-    /*
-    position: fixed;
-    */
+
 }
 
 nav {
@@ -71,7 +69,7 @@ nav a {
 
 .nav_search img {
     width: 18px;
-    right: 0px;
+    right: 0;
     top: 50%;
     transform: translate(-50%, -50%) rotate(10deg);
     position: absolute;
@@ -197,7 +195,7 @@ nav a {
     flex-direction: column; /* Расположить кнопки в столбик */
     align-items: flex-start; /* Выравнивание по левому краю */
     position: absolute;
-    top: 40px; /* Расстояние от верхней границы под навигационной панелью */
+    top: 45px; /* Расстояние от верхней границы под навигационной панелью */
     right: 0;
     background-color: var(--white); /* Белый фон */
     width: 100%; /* Полная ширина */
@@ -393,7 +391,7 @@ nav a {
     .nav_search {
         align-items: center;
         display: flex;
-        height: 26px;
+        height: 16px;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -401,6 +399,8 @@ nav a {
     }
 
     .nav_search input {
+        height: 26px;
+        width: 120px;
         font-size: 10px;
         padding: 8px 10px; /* Уменьшаем отступы */
     }
@@ -408,27 +408,8 @@ nav a {
     .nav_search img {
         align-items: center;
         width: 14px; /* Уменьшаем иконку еще больше */
-        right: 18px;
-        top: 14px;
-
     }
 
-    .burger-menu {
-        right: 10px;
-        width: 20px;
-        height: 22px; /* Уменьшаем высоту бургер-меню */
-    }
-
-
-
-    .burger-icon {
-        width: 100%;
-        background-color: #333;
-        height: var(--size);
-        border-radius: 1px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
     .header_content{
         height: 100vh;
     }
@@ -448,7 +429,6 @@ nav a {
     }
 
     .cart-icon {
-        right: 40px;
         font-size: 1.4em;
         display: flex;
     }
@@ -458,4 +438,11 @@ nav a {
         flex-direction: column;
         align-items: center;
     }
+    .nav_buttons.open {
+        top: 34px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
+
