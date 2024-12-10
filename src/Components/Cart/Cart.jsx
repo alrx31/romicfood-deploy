@@ -1,9 +1,11 @@
 import React from 'react';
 import './Cart.css';
-import {FiShoppingCart, FiTrash2} from 'react-icons/fi'; // Иконка для удаления товара
+import {FiShoppingCart, FiTrash2} from 'react-icons/fi';
+import {useNavigate} from "react-router-dom"; // Иконка для удаления товара
 
 function Cart({list,setList}) {
 
+    let navigate = useNavigate();
 
     let removeProductFromCart = (index) => {
         let newList = [...list];
@@ -39,7 +41,12 @@ function Cart({list,setList}) {
                 ) : (
                     <div className="cart_empty">
                         <FiShoppingCart style={{ fontSize: '48px', color: '#cccccc' }} />
-                        <p>Ваша корзина пуста</p></div>
+                        <p>Ваша корзина пуста</p>
+                        <button
+                            className="cart_escape_button"
+                            onClick={() => navigate('/')}
+                        >Назад</button>
+                    </div>
                 )}
             </div>
             {list.length > 0 && (
@@ -48,7 +55,10 @@ function Cart({list,setList}) {
                     <p className="cart_total_price">{list.reduce((total, item) => total + item.price, 0)} ₽</p>
                 <div className="buttons_container">
                     <button className="cart_checkout_button">Оформить заказ</button>
-                    <button className="cart_escape_button">Назад</button>
+                    <button
+                        className="cart_escape_button"
+                        onClick={() => navigate('/')}
+                    >Назад</button>
                 </div>
                 </div>
             )}
